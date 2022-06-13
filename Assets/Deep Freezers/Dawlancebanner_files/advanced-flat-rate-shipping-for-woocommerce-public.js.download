@@ -1,0 +1,2 @@
+(function($){'use strict';})(jQuery);jQuery(document).ready(function(){jQuery('body').on('change','input[name="payment_method"]',function(){jQuery('body').trigger('update_checkout');});});jQuery(window).load(function(){if(jQuery(".forceall_shipping_method").length){if(jQuery(".forceall_shipping_method").is(":hidden")){updateCartButton();}}
+function updateCartButton(){jQuery(".forceall_shipping_method").attr('checked',true).trigger('change');var checked=jQuery(".forceall_shipping_method").is(":checked");if(checked=='true'){jQuery("[name='update_cart']").trigger("click");}}});
